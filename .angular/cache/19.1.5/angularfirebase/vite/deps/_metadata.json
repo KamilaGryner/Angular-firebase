@@ -1,0 +1,67 @@
+{
+  "hash": "0b4b65cc",
+  "configHash": "2ac35dc3",
+  "lockfileHash": "e3a7dee5",
+  "browserHash": "d4906639",
+  "optimized": {
+    "@angular/core": {
+      "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "0a032c24",
+      "needsInterop": false
+    },
+    "@angular/fire/app": {
+      "src": "../../../../../../node_modules/@angular/fire/fesm2022/angular-fire-app.mjs",
+      "file": "@angular_fire_app.js",
+      "fileHash": "225b23b3",
+      "needsInterop": false
+    },
+    "@angular/fire/auth": {
+      "src": "../../../../../../node_modules/@angular/fire/fesm2022/angular-fire-auth.mjs",
+      "file": "@angular_fire_auth.js",
+      "fileHash": "5b396af0",
+      "needsInterop": false
+    },
+    "@angular/fire/firestore": {
+      "src": "../../../../../../node_modules/@angular/fire/fesm2022/angular-fire-firestore.mjs",
+      "file": "@angular_fire_firestore.js",
+      "fileHash": "c083d64f",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "95bae43d",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "71294ef9",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "d3dd69d6",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-CTTLSPTI": {
+      "file": "chunk-CTTLSPTI.js"
+    },
+    "chunk-XFOP6ZM2": {
+      "file": "chunk-XFOP6ZM2.js"
+    },
+    "chunk-DUU47AIY": {
+      "file": "chunk-DUU47AIY.js"
+    },
+    "chunk-F2MQRNFT": {
+      "file": "chunk-F2MQRNFT.js"
+    },
+    "chunk-L5JRHL3X": {
+      "file": "chunk-L5JRHL3X.js"
+    }
+  }
+}
