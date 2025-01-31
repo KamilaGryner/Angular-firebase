@@ -1,7 +1,6 @@
 <div class="container mt-4">
     <h2>Cheaper version of Google ads </h2>
-  
-    <!--<button class="btn btn-primary mb-3">Create New Campaign</button>-->
+    <h4>complete the following sections with your details</h4>
 
     <form id="createItemForm" (ngSubmit)="onSubmit()">
       <div class="mb-3">
@@ -12,10 +11,6 @@
         <label for="keywords" class="from-label">Keywords</label>
         <input type="text" class="form-control" id="keywords" name="keywords" [(ngModel)]="newCampaign.keywords" required>
       </div>
-      <!--<div class="mb-3">
-        <label for="actions" class="from-label">Actions</label>
-        <input type="text" class="form-control" id="actions" name="actions" [(ngModel)=newCampaign.actions] required>
-      </div>-->
       <div class="mb-3">
         <label for="bidAmount" class="from-label">Bid amount</label>
         <input type="number" class="form-control" id="bidAmount" name="bidAmount" [(ngModel)]="newCampaign.bidAmount" required>
@@ -36,6 +31,10 @@
         <label for="radius" class="from-label">Radius</label>
         <input type="number" class="form-control" id="radius" name="radius" [(ngModel)]="newCampaign.radius" required>
       </div>
+      <div class="mb-3">
+        <label for="radius" class="from-label">Action</label>
+        <input type="number" class="form-control" id="radius" name="radius" [(ngModel)]="newCampaign.radius" required>
+      </div>
       <button type="submit" class="btn btn-primary">Save Campaign</button>
     </form>
 
@@ -44,12 +43,13 @@
         <tr>
           <th scope="col">Campaign name</th>
           <th scope="col">Keywords</th>
-          <th scope="col">Actions</th>
           <th scope="col">Bid amount</th>
           <th scope="col">Campaign fund</th>  
           <th scope="col">Status</th>
           <th scope="col">Town</th>
           <th scope="col">Radius</th>
+          <th scope="col">Actions</th>
+
         </tr>
       </thead> 
       <tbody>

@@ -15,13 +15,13 @@ export class MainComponent implements OnInit{
   campaigns: Campaign[] = [];
   newCampaign: Campaign = {
     id:'',
-    name:'',
-    keywords:'',
-    bidAmount:0,
-    campaignFund:0,
-    status:true,
-    town:'',
-    radius:0
+    name:'Wiosenna Wyprzedaż Obuwia',
+    keywords:'buty sportowe, sandały damskie, obuwie trekkingowe',
+    bidAmount:2,
+    campaignFund:1000,
+    status:false,
+    town:'Warszawa',
+    radius: 15
   };
   constructor(private campaignsService: CampaignsService){}
   ngOnInit(){
@@ -32,18 +32,23 @@ export class MainComponent implements OnInit{
   }
 
   onSubmit(){
+
+    if(this.newCampaign.name && this.newCampaign.keywords && this.newCampaign.bidAmount && this.newCampaign.campaignFund && this.newCampaign.status && this.newCampaign.name && this.newCampaign.town&& this.newCampaign.radius >0){
     this.campaignsService.saveData(this.newCampaign);
     console.log('Kampania zapisana', this.newCampaign);
     //clearing form
     this.newCampaign = {
     id:'',
-    name:'',
-    keywords:'',
-    bidAmount:0,
-    campaignFund:0,
-    status:true,
-    town:'',
-    radius: 0
+    name:'Wiosenna Wyprzedaż Obuwia',
+    keywords:'buty sportowe, sandały damskie, obuwie trekkingowe',
+    bidAmount:2,
+    campaignFund:1000,
+    status:false,
+    town:'Warszawa',
+    radius: 15
+      }
+    } else{
+      alert('Fill in the gaps');
     }
   }
 
