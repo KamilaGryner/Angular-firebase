@@ -39,40 +39,30 @@
       <button type="submit" class="btn btn-primary">Save Campaign</button>
     </form>
 
-
-  
     <table class="table">
       <thead>
         <tr>
           <th scope="col">Campaign name</th>
-  
           <th scope="col">Keywords</th>
-  
           <th scope="col">Actions</th>
-
           <th scope="col">Bid amount</th>
-
-          <th scope="col">Campaign fund</th>
-  
+          <th scope="col">Campaign fund</th>  
           <th scope="col">Status</th>
-  
           <th scope="col">Town</th>
-
           <th scope="col">Radius</th>
-
         </tr>
-      </thead>
-  
+      </thead> 
       <tbody>
-        <tr>
-          <td></td>
-  
-          <td></td>
-  
+        <tr *ngFor="let campaign of campaigns">
+          <td (click)="onNameClick(campaign)">{{campaign.name}}</td>
+          <td (click)="onKeywordsClick(campaign)">{{campaign.keywords}}</td>
+          <td (click)="onBidAmountClick(campaign)">{{campaign.bidAmount}}</td>
+          <td (click)="onCampaignFundClick(campaign)">{{campaign.campaignFund}}</td>
+          <td (click)="onStatusClick(campaign)">{{campaign.status}}</td>
+          <td (click)="onTownClick(campaign)">{{campaign.town}}</td>
+          <td (click)="onRadiusClick(campaign)">{{campaign.radius}}</td>
           <td>
-            <button class="btn btn-warning btn-sm mx-2 my-2">Edit</button>
-  
-            <button class="btn btn-danger btn-sm ml-2">Delete</button>
+            <button class="btn btn-danger btn-sm ml-2" (click)="onDelete(campaign)">Delete</button>
           </td>
         </tr>
       </tbody>

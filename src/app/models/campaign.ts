@@ -4,7 +4,7 @@ export interface Campaign {
     keywords: string;
     bidAmount: number;
     campaignFund: number;
-    status: string;
+    status: boolean;
     town: string;
     radius: number;
 }

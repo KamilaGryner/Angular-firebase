@@ -1,4 +1,4 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { ApplicationConfig, provideZoneChangeDetection, importProvidersFrom } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { FormsModule } from '@angular/forms';  
 import { routes } from './app.routes';
@@ -6,17 +6,16 @@ import { provideClientHydration, withEventReplay } from '@angular/platform-brows
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
-import { importProvidersFrom } from '@angular/core';
-
-
+import { CommonModule } from '@angular/common';
 
 export const appConfig: ApplicationConfig = {
   providers: [
    // provideForms(),  
-    importProvidersFrom(FormsModule),  
-    provideZoneChangeDetection({ eventCoalescing: true }),
+   importProvidersFrom(CommonModule, FormsModule),  
+   provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideClientHydration(withEventReplay()),
+
     provideFirebaseApp(() => initializeApp({
       apiKey: "AIzaSyACIr7wxp_3qvZ8_ZqkRpZRYKyvUOdt6TA",
       authDomain: "angular-firebase-project-d9617.firebaseapp.com",
@@ -27,5 +26,6 @@ export const appConfig: ApplicationConfig = {
     })),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore())
+    
   ]
 };
