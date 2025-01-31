@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { Campaign } from '../models/campaign';
 import { CampaignsService } from '../services/campaigns.service';
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';  
 
 @Component({
   selector: 'app-main',
   imports: [CommonModule, FormsModule],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css',
-  standalone: true,  // Angular 19 Standalone API
+  standalone: true,  
 })
+
 export class MainComponent implements OnInit{
   campaigns: Campaign[] = [];
   newCampaign: Campaign = {
@@ -38,6 +39,8 @@ export class MainComponent implements OnInit{
     console.log('Kampania zapisana', this.newCampaign);
     //clearing form
     this.newCampaign = {
+
+
     id:'',
     name:'Wiosenna Wyprzedaż Obuwia',
     keywords:'buty sportowe, sandały damskie, obuwie trekkingowe',
@@ -113,6 +116,8 @@ export class MainComponent implements OnInit{
     if(newName != null){
       campaign.name =newName;
       this.campaignsService.updateData(campaign);
+
     }
-  }
-}
+   }
+ }
+  

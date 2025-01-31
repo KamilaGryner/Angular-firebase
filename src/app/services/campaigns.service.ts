@@ -8,10 +8,10 @@ import { Observable } from 'rxjs';
 })
 export class CampaignsService {
   private firestore = inject(Firestore);
-  private environmentInjector = inject(EnvironmentInjector); // 🔥 Wymusza poprawny Injection Context
+  private environmentInjector = inject(EnvironmentInjector); 
 
   saveData(data: Campaign): Promise<void> {
-    return runInInjectionContext(this.environmentInjector, () => { // 🔥 Wymusza Injection Context dla Firestore
+    return runInInjectionContext(this.environmentInjector, () => { 
       const collectionInstance = collection(this.firestore, 'campaigns');
       return addDoc(collectionInstance, data)
         .then(() => {
